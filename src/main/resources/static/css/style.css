@@ -1,0 +1,27 @@
+body {
+    background-color: #e9eaf7;
+    font-family: "Ubuntu", "Arial", sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+nav {
+    font-size: 18px;
+    background-color: #b5baf7;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.accordion {
+    background-color: #e3e5fd;
+}
+
+footer {
+    height: 20;
+    background-color: #b3b3b3;
+}

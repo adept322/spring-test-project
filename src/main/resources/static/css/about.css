@@ -1,0 +1,23 @@
+.description {
+    border: 1px solid;
+    border-color: #b5baf7;
+    border-radius: 10px;
+    background-color: #e9eaf7;
+}
+
+.description-photo {
+    text-align: left;
+    border: 1px solid;
+    border-color: #b5baf7;
+    border-radius: 10px;
+}
+
+h4 {
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
