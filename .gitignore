@@ -1,5 +1,7 @@
 ### FILES ###
 .DS_Store
+.mvn
+.idea
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
