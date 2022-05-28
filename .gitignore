@@ -2,6 +2,10 @@
 .DS_Store
 .mvn
 .idea
+mvnw.cmd
+mvnw
+.gitignore
+
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
