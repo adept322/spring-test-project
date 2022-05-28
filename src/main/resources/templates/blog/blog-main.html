@@ -11,6 +11,7 @@
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/fragments/header.css">
     <link rel="stylesheet" href="/css/fragments/footer.css">
+    <link rel="stylesheet" href="/css/blog.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/img/icon-new.jpg">
     <title>Blog</title>
@@ -19,9 +20,17 @@
 <body>
 <header th:insert="fragments/header :: header"></header>
 <main>
-
     <div class="container mt-5">
-        <h1>Блог сайта</h1>
+        <div class="row">
+            <div class="col-10">
+                <h1>Блог сайта</h1>
+            </div>
+            <div class="col-2">
+                <a class="my-link" href="/blog/add">Добавить статью</a>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
         <div th:each="post : ${posts}" class="alert alert-info mt-2">
             <h3 th:text="${post.title}"></h3>
             <p th:text="${post.anons}"></p>
