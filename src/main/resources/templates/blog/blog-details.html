@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Refresh" content="5" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -12,7 +13,8 @@
     <link rel="stylesheet" href="/css/fragments/header.css">
     <link rel="stylesheet" href="/css/fragments/footer.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" href="/img/icon-new.jpg">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="icon" href="/img/icon.jpg">
     <title>Details</title>
 </head>
 
@@ -21,17 +23,24 @@
 <main>
 
     <div class="container mt-5">
-        <div th:each="el : ${post}" class="alert alert-info mt-2">
+        <div th:each="el : ${post}" class="alert mt-2">
             <h1 th:text="${el.title}"></h1>
             <p th:text="${el.full_text}"></p>
             <p><b>Просмотры: </b><span th:text="${el.views}"></span></p>
-            <a th:href="'/blog/' + ${el.id} + '/edit'" class="btn btn-warning">Редактировать</a>
-            <br><br>
-            <form th:action="'/blog/' + ${el.id} + '/remove'" method="post">
-                <button class="btn btn-warning" type="submit">Удалить</button>
-            </form>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <form th:action="'/blog/' + ${el.id} + '/remove'" method="post">
+                    <button class="btn btn-outline-primary" type="submit" style="border-bottom-right-radius: 0; border-top-right-radius: 0;">Удалить</button>
+                </form>
+                <a th:href="'/blog/' + ${el.id} + '/edit'" class="btn btn-outline-primary">Редактировать</a>
+            </div>
 
         </div>
+
+
+
+
+
+
     </div>
 
 </main>

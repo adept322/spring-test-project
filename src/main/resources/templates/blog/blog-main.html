@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Refresh" content="5" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="/css/fragments/footer.css">
     <link rel="stylesheet" href="/css/blog.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" href="/img/icon-new.jpg">
+    <link rel="icon" href="/img/icon.jpg">
     <title>Blog</title>
 </head>
 
@@ -21,20 +22,14 @@
 <header th:insert="fragments/header :: header"></header>
 <main>
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-10">
-                <h1>Блог сайта</h1>
-            </div>
-            <div class="col-2">
-                <a class="my-link" href="/blog/add">Добавить статью</a>
-            </div>
-        </div>
+        <h1>Блог сайта</h1>
+        <span><a class="btn btn-outline-primary" href="/blog/add">Добавить статью</a></span>
     </div>
     <div class="container mt-5">
-        <div th:each="post : ${posts}" class="alert alert-info mt-2">
+        <div th:each="post : ${posts}" class="alert mt-2">
             <h3 th:text="${post.title}"></h3>
             <p th:text="${post.anons}"></p>
-            <a th:href="'/blog/' + ${post.id}" class="btn btn-warning">Детальнее</a>
+            <a th:href="'/blog/' + ${post.id}" class="btn btn-outline-primary">Детальнее</a>
         </div>
     </div>
 
